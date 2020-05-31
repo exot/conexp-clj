@@ -2,6 +2,13 @@
 
 #+options: toc:t
 
+#+bind: org-export-filter-link-functions (tmp-localize-links)
+#+begin_src emacs-lisp :exports none :results silent
+(defun tmp-localize-links (text backend info)
+  (message text)
+  text)
+#+end_src
+
 * A Quick Introduction
 
 #+include: Getting-Started.org
@@ -73,3 +80,7 @@
 
 #+include: Development.org
 
+
+# Local Variables:
+# org-export-allow-bind-keywords: t
+# End:
