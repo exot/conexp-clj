@@ -2,7 +2,16 @@
 
 #+options: toc:t
 
-#+begin_src emacs-lisp :exports none :results silent
+* COMMENT Exporting
+
+Before exporting this file, we /localize/ all links between different files of
+this documentation.  To this end, we convert them to internal links by removing
+the file name prefix whenever a literal ~#~ is contained in the link, i.e., when
+the link points to a headline with a ~CUSTOM_ID~ property set.
+
+This function must be evaluated before this file can be exported.
+
+#+begin_src emacs-lisp :exports result :results silent
 (defun tmp-localize-links (backend)
   (beginning-of-buffer)
   (message "Starting to localize links")
