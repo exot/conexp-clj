@@ -1,6 +1,6 @@
 #+title: ~conexp-clj~ – A General Purpose Tool for Formal Concept Analysis
 
-#+options: toc:t
+#+toc: headlines 2
 
 * COMMENT Exporting
 
