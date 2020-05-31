@@ -6,7 +6,10 @@
 #+begin_src emacs-lisp :exports none :results silent
 (defun tmp-localize-links (text backend info)
   (message text)
-  text)
+  (cond
+   ((org-export-derived-backend-p backend 'html)
+    (replace-regexp-in-string "href=\"[^\"]*#[^\"]*\"" "href=foo" text))
+   (t text)))
 #+end_src
 
 * A Quick Introduction

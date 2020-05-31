@@ -24,7 +24,7 @@ to ~conexp-clj-2.1.0-SNAPSHOT-standalone.jar~.
 
 ** Setting up Emacs to Run Clojure Code
 :PROPERTIES:
-:ID:       7aeb6999-69da-4747-928d-c7163cdad3f4
+:CUSTOM_ID: setting-up-emacs-to-run-clojure-code
 :END:
 
 Most of the documentation for ~conexp-clj~ is written in [[https://orgmode.org][Org Mode]], a markup

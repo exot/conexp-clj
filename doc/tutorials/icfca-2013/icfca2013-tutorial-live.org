@@ -8,7 +8,7 @@ are also some [[file:icfca2013-tutorial-talk.pdf][slides]] ([[file:icfca2013-tut
 this tutorial.
 
 Note: the corresponding Org Mode file contains source blocks that can be
-exectued directly.  See [[file:~/Documents/projects/conexp-clj/doc/Development.org::#7aeb6999-69da-4747-928d-c7163cdad3f4][Setting up Emacs to Run Clojure Code]] for how to exectue
+exectued directly.  See [[file:~/Documents/projects/conexp-clj/doc/Development.org::#setting-up-emacs-to-run-clojure-code][Setting up Emacs to Run Clojure Code]] for how to exectue
 those blocks from within the document.
 
 ** Creating Formal Contexts
