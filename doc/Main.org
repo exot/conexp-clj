@@ -2,14 +2,13 @@
 
 #+options: toc:t
 
-#+bind: org-export-filter-link-functions (tmp-localize-links)
 #+begin_src emacs-lisp :exports none :results silent
-(defun tmp-localize-links (text backend info)
-  (message text)
-  (cond
-   ((org-export-derived-backend-p backend 'html)
-    (replace-regexp-in-string "href=\"[^\"]*#[^\"]*\"" "href=foo" text))
-   (t text)))
+(defun tmp-localize-links (backend)
+  (beginning-of-buffer)
+  (message "Starting to localize links")
+  (while (re-search-forward "\\[\\[file:[^]]*#" nil 'no-error)
+    (replace-match "[[#")
+    (message "Found at %s" (point))))
 #+end_src
 
 * A Quick Introduction
@@ -85,4 +84,5 @@
 
 # Local Variables:
 # org-export-allow-bind-keywords: t
+# org-export-before-parsing-hook: (tmp-localize-links)
 # End:
