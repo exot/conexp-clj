@@ -22,3 +22,28 @@ lein ueberjar
 This will create self-contained jar files in the ~builds/uberjar~ named similar
 to ~conexp-clj-2.1.0-SNAPSHOT-standalone.jar~.
 
+** Setting up Emacs to Run Clojure Code
+:PROPERTIES:
+:ID:       7aeb6999-69da-4747-928d-c7163cdad3f4
+:END:
+
+Most of the documentation for ~conexp-clj~ is written in [[https://orgmode.org][Org Mode]], a markup
+language for Emacs.  In particular, Org-Mode provides a feature called [[https://orgmode.org/manual/Working-with-Source-Code.html][Source
+Blocks]] that allow to embed executable code snippets into a document.  Some files
+of the documentation of ~conexp-clj~ make use of this feature.
+
+Before one can this embedded code, the following steps are necessary to be able
+to run Clojure code in Emacs Org-Mode source blocks:
+
+- Install cider from ~package.el~, directly from
+  https://github.com/clojure-emacs/cider, or by any other means.
+
+- Run the following code when ~default-directory~ is within the ~conexp-clj~
+  source repository.
+
+  #+begin_src emacs-lisp :results silent :exports code
+(require 'ob-clojure)
+(require 'cider)
+(cider-jack-in-clj nil)
+  #+end_src
+
